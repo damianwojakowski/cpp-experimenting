@@ -12,6 +12,7 @@ class OverloadedPerson {
 public:
     OverloadedPerson();
     virtual ~OverloadedPerson();
+    void info();
 };
 
 #endif /* SRC_CLASSES_OVERLOADEDPERSON_H_ */

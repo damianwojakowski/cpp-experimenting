@@ -5,14 +5,21 @@
  *      Author: damian
  */
 
+#include <iostream>
+
+using namespace std;
+
 #include "OverloadedPerson.h"
 
 OverloadedPerson::OverloadedPerson() {
     // TODO Auto-generated constructor stub
-
 }
 
 OverloadedPerson::~OverloadedPerson() {
     // TODO Auto-generated destructor stub
+}
+
+void OverloadedPerson::info() {
+    cout << "calling OverloadedPerson.info()" << endl;
 }
 

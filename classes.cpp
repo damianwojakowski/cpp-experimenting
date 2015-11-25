@@ -2,6 +2,7 @@
 
 // classes
 #include "SomePerson.h"
+#include "classes/OverloadedPerson.h"
 
 using namespace std;
 
@@ -29,5 +30,6 @@ void testBasics() {
 }
 
 void overloadingOperators() {
-
+    OverloadedPerson overloadedPerson;
+    overloadedPerson.info();
 }
