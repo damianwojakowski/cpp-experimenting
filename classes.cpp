@@ -3,6 +3,10 @@
 
 using namespace std;
 
+void info() {
+    cout << "### Classes module ###" << endl;
+}
+
 class Person
 {
     char name[80];
@@ -32,5 +36,6 @@ void testBasics() {
 }
 
 void classesBasics() {
+    info();
     testBasics();
 }
