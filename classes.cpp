@@ -5,6 +5,8 @@ using namespace std;
 
 void info() {
     cout << "### Classes module ###" << endl;
+    cout << endl;
+    cout << endl;
 }
 
 class Person
