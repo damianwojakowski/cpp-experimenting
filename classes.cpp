@@ -31,5 +31,18 @@ void testBasics() {
 
 void overloadingOperators() {
     OverloadedPerson overloadedPerson;
+    overloadedPerson.setName("Daniel");
     overloadedPerson.info();
+    overloadedPerson.printTheNumber();
+
+    OverloadedPerson overloadedPersonNo2(20);
+    overloadedPersonNo2.setName("Karol");
+    overloadedPersonNo2.info();
+    overloadedPersonNo2.printTheNumber();
+
+    cout << overloadedPerson.getName() << " plus " << overloadedPersonNo2.getName() << " equls: ";
+
+    OverloadedPerson newPerson = (overloadedPersonNo2 + overloadedPerson);
+    newPerson.info();
+    newPerson.printTheNumber();
 }
