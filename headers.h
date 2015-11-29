@@ -31,5 +31,6 @@ void testObjects();
 
 void classesBasics();
 void testExceptions();
+void testInheritance();
 
 #endif /* SRC_HEADERS_H_ */

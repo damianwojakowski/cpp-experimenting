@@ -2,8 +2,8 @@
 // Name        : main.cpp
 // Author      : Damian Wojakowski
 // Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C++, Ansi-style
+// Copyright   : MIT
+// Description : Testing C++
 //============================================================================
 
 #include <iostream>
@@ -38,7 +38,8 @@ int main() {
     //run_operators();
     // testObjects();
     //classesBasics();
-    testExceptions();
+    //testExceptions();
+    testInheritance();
 
     return 0;
 }
