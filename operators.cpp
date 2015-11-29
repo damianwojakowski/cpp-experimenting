@@ -36,5 +36,3 @@ void run_operators() {
 
     cout << "type of a1 is: " << typeid(a1).name();
 }
-
-

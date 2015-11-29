@@ -13,9 +13,21 @@
 
 using namespace std;
 
+void lotsOfTinyTests();
 inline double dziel(double a, double b);
 
 int main() {
+    //lotsOfTinyTests()
+    //testObjects();
+    //classesBasics();
+    //testExceptions();
+    //testInheritance();
+    testTemplates();
+
+    return 0;
+}
+
+void lotsOfTinyTests() {
     //sayHello();
     //decimalToBinary(33000);
     //displayNumberDefinedByPreprocesor();
@@ -35,13 +47,7 @@ int main() {
     //someCFunctions();
     //functions();
     //checkCppString();
-    //run_operators();
-    // testObjects();
-    //classesBasics();
-    //testExceptions();
-    testInheritance();
-
-    return 0;
+    run_operators();
 }
 
 inline double dziel(double a, double b) {

@@ -33,4 +33,6 @@ void classesBasics();
 void testExceptions();
 void testInheritance();
 
+void testTemplates();
+
 #endif /* SRC_HEADERS_H_ */
