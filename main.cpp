@@ -9,10 +9,9 @@
 #include <iostream>
 #include <vector>
 #include <stdio.h>
+#include "headers.h"
 
 using namespace std;
-
-#include "headers.h"
 
 inline double dziel(double a, double b);
 

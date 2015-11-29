@@ -53,4 +53,6 @@ OverloadedPerson & OverloadedPerson::operator = (const OverloadedPerson & rhs) {
     cout << "assignment" << endl;
 
     this->theNumber = rhs.getTheNumber();
+
+    return *this;
 }

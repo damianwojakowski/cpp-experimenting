@@ -2,6 +2,7 @@
 
 // classes
 #include "SomePerson.h"
+#include "classes/classes_headers.h"
 #include "classes/OverloadedPerson.h"
 
 using namespace std;
@@ -42,7 +43,18 @@ void overloadingOperators() {
 
     cout << overloadedPerson.getName() << " plus " << overloadedPersonNo2.getName() << " equls: ";
 
-    OverloadedPerson newPerson = (overloadedPersonNo2 + overloadedPerson);
+    // PLUS OPERATOR
+    OverloadedPerson newPerson = overloadedPersonNo2 + overloadedPerson;
     newPerson.info();
     newPerson.printTheNumber();
+
+    // ASSIGNMENT
+    OverloadedPerson assignmentObject;
+    assignmentObject = newPerson;
+
+    assignmentObject.setName("The Assignment object...");
+    assignmentObject.info();
+    assignmentObject.printTheNumber();
+
+    cout << assignmentObject << endl;
 }

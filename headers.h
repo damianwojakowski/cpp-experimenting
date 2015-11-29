@@ -30,5 +30,4 @@ void run_operators();
 void testObjects();
 void classesBasics();
 
-
 #endif /* SRC_HEADERS_H_ */
