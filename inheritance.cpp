@@ -6,6 +6,7 @@ using namespace std;
 void basicInheritance();
 void testFriendFunction();
 void testCallingParentClassMethods();
+void multipleInheritance();
 
 class Vehicle {
     string kindOfVehicle;
@@ -36,6 +37,15 @@ void Vehicle::turnOnAndGo() {
     cout << "It can go " << this->maxSpeed << " km/h" << endl;
 }
 
+class Canon {
+    string caliber;
+    Canon() {};
+protected:
+    Canon(const string & caliber) {};
+    void canon() { cout << "It has a cannon of caliber " << caliber; };
+
+};
+
 class Bike : public Vehicle {
 public:
     Bike(const string & name) : Vehicle(name, "it's got NO SOUND!", 20) {};
@@ -47,9 +57,10 @@ public:
     Car(const string & name) : Vehicle(name, "wruummmm", 250) {};
 };
 
-class Tank : public Vehicle {
+class Tank : public Vehicle, public Canon {
 public:
-    Tank(const string & name) : Vehicle(name, "very LOUD!", 100) {};
+    Tank(const string & name) : Vehicle(name, "very LOUD!", 100), Canon("50 CAL") {};
+    void hasCanon() { Canon::canon(); };
 };
 
 
@@ -58,7 +69,8 @@ void testInheritance() {
 
     //basicInheritance();
     //testFriendFunction();
-    testCallingParentClassMethods();
+    //testCallingParentClassMethods();
+    multipleInheritance();
 }
 
 void basicInheritance() {
@@ -81,4 +93,12 @@ void testCallingParentClassMethods() {
     cout << endl << "# Calling parent's class methods" << endl;
     Bike bike("My Bike");
     bike.callParent();
+}
+
+void multipleInheritance() {
+    cout << endl << "# Multiple inheritance" << endl;
+
+    Tank myTank("My Super Tank");
+    myTank.turnOnAndGo();
+    myTank.hasCanon();
 }
