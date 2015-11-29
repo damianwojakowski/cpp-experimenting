@@ -15,9 +15,7 @@ OverloadedPerson::OverloadedPerson() : theNumber(10), name("Unknown") {
     // TODO Auto-generated constructor stub
 }
 
-OverloadedPerson::OverloadedPerson(int initTheNumber) : name("Unknown The Second...") {
-    this->theNumber = initTheNumber;
-}
+OverloadedPerson::OverloadedPerson(int initTheNumber) : theNumber(initTheNumber), name("Unknown The Second...") {}
 
 OverloadedPerson::~OverloadedPerson() {
     // TODO Auto-generated destructor stub
@@ -43,11 +41,11 @@ int OverloadedPerson::getTheNumber() const {
     return this->theNumber;
 }
 
-OverloadedPerson OverloadedPerson::operator + (const OverloadedPerson & rhs) const {
-    int someNumber;
-    someNumber = this->theNumber + rhs.getTheNumber();
-    return OverloadedPerson(someNumber);
-}
+//OverloadedPerson OverloadedPerson::operator + (const OverloadedPerson & rhs) const {
+//    int someNumber;
+//    someNumber = this->theNumber + rhs.getTheNumber();
+//    return OverloadedPerson(someNumber);
+//}
 
 OverloadedPerson & OverloadedPerson::operator = (const OverloadedPerson & rhs) {
     cout << "assignment" << endl;

@@ -15,4 +15,8 @@ std::ostream & operator << (std::ostream & o, const OverloadedPerson & r) {
     return o << "The number is: " << r.getTheNumber();
 }
 
+OverloadedPerson operator + (const OverloadedPerson & lhs, const OverloadedPerson & rhs) {
+    return OverloadedPerson(lhs.getTheNumber() + rhs.getTheNumber());
+}
+
 #endif /* SRC_CLASSES_CLASSES_HEADERS_H_ */

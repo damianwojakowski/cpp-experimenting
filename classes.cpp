@@ -56,5 +56,10 @@ void overloadingOperators() {
     assignmentObject.info();
     assignmentObject.printTheNumber();
 
+    // Testing overloaded cout operator
     cout << assignmentObject << endl;
+
+    // Testing non-member overloaded plus operator - int is converted into OverloadedPerson
+    cout << "overloadedPersonNo2 + 50 = " << overloadedPersonNo2 + 50 << endl;
+    cout << "50 + overloadedPersonNo2 = " << 50 + overloadedPersonNo2 << endl;
 }

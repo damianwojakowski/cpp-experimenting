@@ -22,7 +22,7 @@ public:
     void setName(string name);
     string getName();
     int getTheNumber() const;
-    OverloadedPerson operator + (const OverloadedPerson & rhs) const;
+    //OverloadedPerson operator + (const OverloadedPerson & rhs) const;
     OverloadedPerson & operator = (const OverloadedPerson & rhs);
 private:
     int theNumber;
