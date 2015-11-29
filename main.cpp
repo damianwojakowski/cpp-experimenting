@@ -37,7 +37,8 @@ int main() {
     //checkCppString();
     //run_operators();
     // testObjects();
-    classesBasics();
+    //classesBasics();
+    testExceptions();
 
     return 0;
 }

@@ -28,6 +28,8 @@ void functions();
 void checkCppString();
 void run_operators();
 void testObjects();
+
 void classesBasics();
+void testExceptions();
 
 #endif /* SRC_HEADERS_H_ */
