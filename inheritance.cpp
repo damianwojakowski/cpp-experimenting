@@ -6,7 +6,8 @@ using namespace std;
 void basicInheritance();
 void testFriendFunction();
 void testCallingParentClassMethods();
-void multipleInheritance();
+void multipleInheritanceAndOverridingParentMemberFunction();
+void overloadingMethodsViaPointersWithVirutalKeyword();
 
 class Vehicle {
     string kindOfVehicle;
@@ -25,11 +26,21 @@ class Vehicle {
     // this function can use Vehicle's private members
     friend void testFriendFunction();
 public:
-    void turnOnAndGo();
+    // you need virutal keyword so the method could be overrided when calling it via pointer
+    virtual void turnOnAndGo();
     void makeSound() { cout << "making sound..."; };
+
+    // you need virutal destructor when you have virutal members
+    virtual ~Vehicle();
 };
 
-Vehicle::Vehicle(const string & name, const string & sound, int maxSpeed) : kindOfVehicle(name), sound(sound), maxSpeed(maxSpeed) {}
+Vehicle::Vehicle(const string & name, const string & sound, int maxSpeed) : kindOfVehicle(name), sound(sound), maxSpeed(maxSpeed) {
+    cout << "----- Vehicle created -----" << endl;
+}
+
+Vehicle::~Vehicle() {
+    cout << "----- Vehicle destroyed -----" << endl;
+}
 
 void Vehicle::turnOnAndGo() {
     cout << "You're looking at " << this->kindOfVehicle << endl;
@@ -41,8 +52,8 @@ class Canon {
     string caliber;
     Canon() {};
 protected:
-    Canon(const string & caliber) {};
-    void canon() { cout << "It has a cannon of caliber " << caliber; };
+    Canon(const string & caliber) : caliber(caliber) {};
+    void canon() { cout << "It has a cannon of caliber " << caliber << endl; };
 
 };
 
@@ -60,8 +71,13 @@ public:
 class Tank : public Vehicle, public Canon {
 public:
     Tank(const string & name) : Vehicle(name, "very LOUD!", 100), Canon("50 CAL") {};
-    void hasCanon() { Canon::canon(); };
+    void turnOnAndGo();
 };
+
+void Tank::turnOnAndGo() {
+    Vehicle::turnOnAndGo();
+    Canon::canon();
+}
 
 
 void testInheritance() {
@@ -70,7 +86,8 @@ void testInheritance() {
     //basicInheritance();
     //testFriendFunction();
     //testCallingParentClassMethods();
-    multipleInheritance();
+    //multipleInheritanceAndOverridingParentMemberFunction();
+    overloadingMethodsViaPointersWithVirutalKeyword();
 }
 
 void basicInheritance() {
@@ -95,10 +112,28 @@ void testCallingParentClassMethods() {
     bike.callParent();
 }
 
-void multipleInheritance() {
-    cout << endl << "# Multiple inheritance" << endl;
+void multipleInheritanceAndOverridingParentMemberFunction() {
+    cout << endl << "# Multiple inheritance and simple overloading of methods" << endl;
 
     Tank myTank("My Super Tank");
     myTank.turnOnAndGo();
-    myTank.hasCanon();
+}
+
+void overloadingMethodsViaPointersWithVirutalKeyword() {
+    cout << endl << "# Overloading methods with virutal keyword" << endl << endl;
+
+    Bike bike("My super bike");
+    bike.turnOnAndGo();
+
+    Car ferrari("Testarossa");
+    ferrari.turnOnAndGo();
+
+    Tank leopard("Leopard The Green");
+    leopard.turnOnAndGo();
+
+    Vehicle *vehicles[] = {&bike, &ferrari, &leopard, nullptr};
+
+    for (int i = 0; vehicles[i]; i++) {
+        vehicles[i]->turnOnAndGo();
+    }
 }
