@@ -12,13 +12,15 @@
 using namespace std;
 
 OverloadedPerson::OverloadedPerson() : theNumber(10), name("Unknown") {
-    // TODO Auto-generated constructor stub
+    cout << "Consructor NO PRARAMS called" << endl;
 }
 
-OverloadedPerson::OverloadedPerson(int initTheNumber) : theNumber(initTheNumber), name("Unknown The Second...") {}
+OverloadedPerson::OverloadedPerson(int initTheNumber) : theNumber(initTheNumber), name("Unknown The Second...") {
+    cout << "Consructor WITH PRARAMS called" << endl;
+}
 
 OverloadedPerson::~OverloadedPerson() {
-    // TODO Auto-generated destructor stub
+    cout << "Destructor called" << endl;
 }
 
 void OverloadedPerson::info() {
