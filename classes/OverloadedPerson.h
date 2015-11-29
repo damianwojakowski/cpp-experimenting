@@ -24,6 +24,9 @@ public:
     int getTheNumber() const;
     //OverloadedPerson operator + (const OverloadedPerson & rhs) const;
     OverloadedPerson & operator = (const OverloadedPerson & rhs);
+
+    // conversion operator overloading
+    operator std::string () const;
 private:
     int theNumber;
     string name;

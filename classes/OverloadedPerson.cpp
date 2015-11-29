@@ -54,3 +54,7 @@ OverloadedPerson & OverloadedPerson::operator = (const OverloadedPerson & rhs) {
 
     return *this;
 }
+
+OverloadedPerson::operator std::string () const {
+    return string(this->name);
+}
