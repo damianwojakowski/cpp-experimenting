@@ -24,6 +24,23 @@ T SampleClass<T>::getValue() {
     return this->someValue;
 }
 
+template <typename D>
+class OtherClass {
+    D someValue;
+public:
+    void setValue(D value);
+    D getValue();
+};
+
+template <typename D>
+void OtherClass<D>::setValue(D value) {
+    this->someValue = value;
+}
+
+template <typename D>
+D OtherClass<D>::getValue() {
+    return this->someValue;
+}
 
 void testTemplates() {
     cout << "### TESTING TEMPLATES ###" << endl << endl;
@@ -57,4 +74,7 @@ void testClassTemplates() {
     someValue2.setValue("THIS STRING");
     cout << "The value is: " << someValue2.getValue() << endl;
 
+    OtherClass<string> someString;
+    someString.setValue("Hello World");
+    cout << "The value is: " << someString.getValue() << endl;
 }
