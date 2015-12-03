@@ -17,7 +17,7 @@ void lotsOfTinyTests();
 inline double dziel(double a, double b);
 
 int main() {
-    //lotsOfTinyTests()
+    //lotsOfTinyTests();
     //testObjects();
     //classesBasics();
     //testExceptions();
