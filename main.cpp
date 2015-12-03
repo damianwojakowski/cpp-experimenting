@@ -2,7 +2,7 @@
 // Name        : main.cpp
 // Author      : Damian Wojakowski
 // Version     :
-// Copyright   : MIT
+// Copyright   : GNU
 // Description : Testing C++
 //============================================================================
 
@@ -59,7 +59,7 @@ void someCFunctions() {
 
     char s[] = "Some string";
 
-    for (char * cp = s; *cp; cp++) {
+    for (char* cp = s; *cp; cp++) {
         printf("char is %c\n", *cp);
     }
 
