@@ -9,6 +9,7 @@
 #include <stdint.h>
 #include <typeinfo>
 #include <vector>
+#include <stdio.h>
 
 using namespace std;
 
