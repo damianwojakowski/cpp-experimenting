@@ -22,7 +22,8 @@ int main() {
     //classesBasics();
     //testExceptions();
     //testInheritance();
-    testTemplates();
+    //testTemplates();
+    testVirtualFunctions();
 
     return 0;
 }

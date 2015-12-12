@@ -34,5 +34,6 @@ void testExceptions();
 void testInheritance();
 
 void testTemplates();
+void testVirtualFunctions();
 
 #endif /* SRC_HEADERS_H_ */
