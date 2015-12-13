@@ -48,7 +48,7 @@ void lotsOfTinyTests() {
     //someCFunctions();
     //functions();
     //checkCppString();
-    run_operators();
+    //run_operators();
 }
 
 inline double dziel(double a, double b) {

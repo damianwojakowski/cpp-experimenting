@@ -14,7 +14,7 @@ class Vehicle {
 public:
 	Vehicle();
 	virtual ~Vehicle();
-	virtual void horn() {};
+	virtual void horn() = 0;
 };
 
 } /* namespace Virtual */
