@@ -19,6 +19,7 @@ void showBacisInfo(string &some_string) ;
 void references();
 int & changeReferenceValue(int & someValue);
 void workWithStructs();
+void structsWithMethods();
 void f_enums();
 void f_unions();
 void f_auto();
@@ -32,10 +33,11 @@ void checkCppString() {
     //iterateOverStringWithIterator(cppString);
     //references();
     //workWithStructs();
+    structsWithMethods();
     //f_enums();
     //f_unions();
     //f_auto();
-    f_auto_with_vector();
+    //f_auto_with_vector();
 }
 
 void showBacisInfo(string &some_string) {
@@ -109,6 +111,20 @@ void workWithStructs() {
     my_preferences.childrenInRoom = 20;
 
     cout << "Children in room: " << my_preferences.childrenInRoom << endl;
+}
+
+void structsWithMethods() {
+    cout << "Structs with methods" << endl;
+
+    struct StructWithMethod {
+        string helloText;
+        void sayText() { cout << helloText << endl; }
+    };
+
+    StructWithMethod myStructWithText;
+    myStructWithText.helloText = "A method have just been called from inside of a struct, hello!";
+
+    myStructWithText.sayText();
 }
 
 void f_enums() {

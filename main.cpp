@@ -23,7 +23,9 @@ int main() {
     //testExceptions();
     //testInheritance();
     //testTemplates();
-    testVirtualFunctions();
+    //testVirtualFunctions();
+
+    checkCppString();
 
     return 0;
 }
